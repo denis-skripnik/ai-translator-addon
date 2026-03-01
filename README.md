@@ -5,6 +5,14 @@ through an OpenAI-compatible Chat Completions API.
 
 Author: [denis-skripnik](https://github.com/denis-skripnik)
 
+## Download
+
+Download the latest version of the AI Translator add-on:
+
+- [**aiTranslator-0.1.11.nvda-addon**](https://github.com/denis-skripnik/aiTranslatoraddon/raw/main/dist/aiTranslator-0.1.11.nvda-addon)
+
+To install, open the downloaded `.nvda-addon` file with NVDA.
+
 ## Features
 
 - OpenAI-compatible translation requests over `chat/completions`
