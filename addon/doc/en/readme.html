@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Translator</title>
+</head>
+<body>
+  <h1>AI Translator</h1>
+  <p>
+    AI Translator is an NVDA add-on that translates selected text or clipboard
+    text through an OpenAI-compatible Chat Completions API.
+  </p>
+  <p>
+    Author: <a href="https://github.com/denis-skripnik">denis-skripnik</a>
+  </p>
+
+  <h2>Features</h2>
+  <ul>
+    <li><code>NVDA+Shift+T</code>: translate selected text.</li>
+    <li><code>NVDA+Shift+Y</code>: translate text from the clipboard.</li>
+    <li>Speaks the translated text and copies it to the clipboard.</li>
+    <li>Lets you choose OpenAI, OpenRouter, Nous, or a custom API URL.</li>
+    <li>Lets you choose preset models for each provider or enter a custom model ID.</li>
+    <li>Lets you choose target and reverse-translation languages from preset lists or enter custom values.</li>
+    <li>Shows a help link at the top of the settings panel.</li>
+    <li>If the input text is already in the target language, the add-on translates it into the reverse language.</li>
+    <li>Lets you configure API key, model, target language, reverse language, and timeout.</li>
+    <li>Supports gesture reassignment through NVDA Input Gestures.</li>
+  </ul>
+
+  <h2>Setup</h2>
+  <ol>
+    <li>Install the add-on in NVDA.</li>
+    <li>Open NVDA menu, then Preferences, then Settings, then AI Translator.</li>
+    <li>Fill in the Chat Completions API URL, API key, model, target language, reverse translation language, and timeout.</li>
+  </ol>
+  <p>
+    The default API URL is
+    <code>https://api.openai.com/v1/chat/completions</code>.
+  </p>
+
+  <h2>Usage</h2>
+  <p>To translate selected text, select text in an accessible control and press <code>NVDA+Shift+T</code>.</p>
+  <p>To translate clipboard text, copy text to the clipboard and press <code>NVDA+Shift+Y</code>.</p>
+  <p>After a successful request, the add-on speaks the translation and places it in the clipboard.</p>
+
+  <h2>Security Notes</h2>
+  <ul>
+    <li>The add-on uses Python's standard library only and bundles no third-party packages.</li>
+    <li>The API key is sent only to the configured Chat Completions endpoint.</li>
+    <li>The add-on rejects non-HTTPS URLs, except localhost HTTP endpoints for local proxies or gateways.</li>
+    <li>The API key is stored in NVDA configuration, so treat the NVDA user profile as sensitive data.</li>
+    <li>The selected text or clipboard text is sent to the configured provider, so do not use untrusted providers for secrets.</li>
+  </ul>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>This package was syntax-checked and built, but not runtime-tested inside NVDA in this environment.</li>
+    <li>Reading selected text depends on the focused control exposing a standard text selection through NVDA.</li>
+  </ul>
+</body>
+</html>
